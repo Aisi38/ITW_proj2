@@ -1,0 +1,1702 @@
+/* root for colours */
+:root{
+    /* base text colors */
+    --black: #1f1e1ed4; 
+    --grey: #3e3e3e75;
+    --white: #fdfaf6;
+    /* gradients for buttons */
+    --orange_gradient: linear-gradient(135deg,rgba(184, 119, 77, 1) 0%, rgba(200, 140, 105, 1) 100%);
+    --green_gradient: linear-gradient(135deg,rgba(92, 115, 85, 1) 0%, rgba(122, 148, 112, 1) 100%);
+    /* gradient for background */
+    --coffee_gradient: linear-gradient(135deg,rgba(223, 212, 194, 1) 0%, rgba(255, 255, 255, 1) 50%, rgba(223, 202, 181, 1) 100%);
+    --coffee_gradient2: linear-gradient(45deg,rgba(214, 190, 165, 1) 0%, rgba(242, 229, 216, 1) 50%, rgba(214, 190, 165, 1) 100%);
+    --white_gradient: linear-gradient(135deg,rgba(242, 232, 218, 1) 0%, rgba(255, 255, 255, 1) 50%, rgba(242, 232, 218, 1) 100%);
+    --grey_gradient: linear-gradient(135deg,rgba(230, 230, 230, 1) 0%, rgba(255, 255, 255, 1) 50%, rgba(230, 230, 230, 1) 100%);
+    --black_gradient: linear-gradient(135deg,rgba(62, 52, 49, 1) 0%, rgba(107, 90, 85, 1) 50%, rgba(89, 77, 70, 1) 100%);
+    --white_gradient_seethrough: linear-gradient(135deg,rgba(242, 232, 218, 0.9) 0%, rgba(255, 255, 255, 0.9) 50%, rgba(242, 232, 218, 0.9) 100%);
+    /* for base color for gradients and background*/
+    --coffee: #DFD4C2;
+    --coffee2: #d6bea5;
+    --orange: #B8774D;
+    --green: #7A9470;
+    --ngrey: #e6e6e6;
+    --border: #E8D9C8;
+    --black_forgradient: #6B5A55;
+}
+
+/* Fonts
+    font-family: Arial, sans-serif;
+    font-family: 'Pacifico', cursive;
+    font-family: 'Lora', serif;
+*/
+
+/* button borders 
+    border-radius: 5px;
+    border-radius: 12px;
+*/
+
+/* to contain min width + smooth scroling */
+html {
+    scroll-behavior: smooth;
+    min-width: 655px;
+}
+body, header, h1, h2, h3, h4, h5, p, ul, li, span, button, img, div{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: Arial, sans-serif;
+    font-size: 1.5rem;
+}
+header{
+    background: var(--white);
+    background: var(--white_gradient_seethrough);
+    position: sticky;
+    top: 0;
+    z-index: 100; 
+
+}
+main{
+    margin-top: 2rem;
+}
+/* main title */
+h1{
+    font-family: 'Pacifico', cursive;    
+    font-size: 2.5rem;
+}
+/* titles */
+h2{
+    font-size: 1.8rem;
+    font-family: 'Lora', serif;
+} 
+/* fake buttons */
+h3{
+    padding: 1rem;
+    border-radius: 8px;
+    background: var(--orange);
+    background: var(--orange_gradient);
+    color: var(--white);
+    border: 2px solid var(--white);
+    width: fit-content;
+}
+h4{
+    color: var(--white);
+}
+h5{
+    color: var(--orange);
+}
+p{
+    font-size: 1.2rem;
+    color: var(--grey);
+}
+li{
+    list-style: none;
+    color: var(--black);
+    font-size: 1.2rem;
+}
+a{
+    text-decoration: none;
+    color: var(--black);
+    font-size: 1.2rem;
+}
+span{
+    color: var(--orange);
+}
+button{
+    border-radius: 8px;
+    font-size: 2rem;
+}
+img{
+    width: 10rem;
+}
+
+
+#Hcontainer{
+    display: grid;
+    grid-template-columns: 1fr 3fr ;
+    grid-template-rows: auto;
+    align-items: center;
+    border-bottom: 3px solid var(--coffee);
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+    margin-bottom: -2rem;
+}
+
+h1{
+    transition: transform 0.5s ease;
+}
+h1:hover{
+    transform: scale(1.05);
+}
+.title1{
+    grid-column: 1/2;    
+    text-align: center;
+}
+.tgroup i{
+    color: var(--green);
+}
+.title2{
+    grid-column: 2/3;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 3fr 1fr ;
+    grid-template-rows: auto;
+}
+.title2 nav{
+    grid-column: 1/3;
+}
+.title2 nav ul{
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+    align-self: center;
+    justify-content: flex-end;
+    margin-right: 4rem;
+}
+.title2 nav ul li{
+    font-size: 1.8rem;
+}
+
+.title2 button{
+    display: none;
+    grid-column: 2/3;
+
+}
+.title2 button i{
+    display: none;
+    font-size: 2rem;
+}
+/* finish adding links to ur ul li */
+
+.title2 a{
+    position: relative;
+    padding-bottom: 4px;
+}
+
+.title2 a::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--orange);  
+    transform: scaleX(0);   
+    transform-origin: left;
+    transition: transform 0.5s ease;
+}
+.title2 a:hover::after {  
+    transform: scaleX(1);
+}
+/* scalex(1) - till word length*/
+#home{
+    background: var(--coffee);
+    background: var(--coffee_gradient);
+}
+
+.hcontainer{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows:auto;
+    margin-left: 2rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+.hblend{
+    grid-column: 1/2;
+    display: grid;
+    grid-template-rows: repeat(4,auto);
+}
+
+.blend{
+    grid-column: 2/3;
+    position: relative;
+}
+
+.hblend h2{
+    grid-row: 1/2;
+    margin-top: 4rem;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+
+}
+.hblend h3{
+    grid-row: 2/3;
+    background: var(--green);
+    background: var(--green_gradient);
+    border-radius: 14px;
+    font-size: 0.8rem;
+    padding: 0.5rem;
+    margin-bottom: 2.5rem;
+    align-self: center;
+    transition: all 0.5s ease;
+}
+
+.hblend h3:hover{
+    transform: scale(1.05);    
+}
+
+
+
+.maintext{
+    grid-row: 3/4;
+    margin-bottom: 3rem;
+}
+
+.mbuttons{
+    grid-row: 4/5;
+    display: flex;
+    gap: 1rem;
+}
+
+.hblend .mbuttons h3{
+    grid-column: 1/2;
+    align-self: center;
+    padding: 1rem;
+    border-radius: 8px;
+    background: var(--orange);
+    background: var(--orange_gradient);
+    color: var(--white);
+    border: 2px solid var(--white);
+    font-size: 1.2rem;
+    margin-bottom: 4rem;
+    transition: all 0.5s ease;
+}
+.hblend .mbuttons h3:nth-of-type(2){
+    border: 2px solid var(--green);
+    background: var(--white);
+    background: var(--white_gradient);
+    color: #7A9470;
+    transition: all 1s ease;
+}
+.hblend .mbuttons h3:nth-of-type(1):hover{
+    transform: scale(1.05);
+}
+.hblend .mbuttons h3:nth-of-type(2):hover{
+    background: var(--green);
+    background: var(--green_gradient);
+    color: var(--white);
+}
+/* adjusting img visual and priority */
+.blend img{
+    width: fit-content;
+    height: 25rem;
+    border-radius: 50% 60% 40% 70% / 50% 80% 40% 55%;
+    margin-bottom: 4rem;
+    position: relative;
+    z-index: 2;
+    border: 5px solid var(--white);
+    box-shadow: 0 0 15px var(--grey);
+    transition: all 0.5s ease;
+}
+
+.blend img:hover{
+    transform: scale(1.05);
+}
+/* rating position and priority */
+.rating{
+    position: absolute;
+    left: 1.5rem;
+    bottom: 4rem;
+    border-radius: 50%;
+    padding: 1rem;
+    box-shadow: 0 4px 12px var(--coffee);
+    background: var(--coffee);
+    background: var(--coffee_gradient);
+    z-index: 1;
+}
+
+#story{
+    background: var(--coffee2);
+    background: var(--coffee_gradient2);
+}
+
+.scontainer{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: auto;
+    margin-left: 12rem;
+    margin-right: 12rem;
+    padding-bottom: 6rem;
+}
+
+.scontainer h2{
+    grid-column: 1/-1;
+    grid-row: 1/2;
+    text-align: center;
+    margin-top: 5rem;
+    margin-bottom: 1.5rem;
+    font-size: 3rem;
+}
+
+.sdate{
+    grid-column: 1/-1;
+    grid-row: 2/3;    
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2.5rem;
+}
+
+.sdate h3{
+    font-size: 1rem;
+    border-radius: 14px;
+    padding: 0.5rem;
+    transition: all 0.5s ease;
+    display: inline-block; /*scale fix*/
+}
+
+.sdate h3:hover{
+    transform: scale(1.05);    
+}
+
+.stext{
+    grid-column: 1/-1;
+    grid-row: 3/4;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3rem;
+}
+
+.stext p{
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.patience{
+    grid-column: 1/-1;
+    grid-row: 4/5;    
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.patience p{
+    text-align: center;
+    padding: 2rem;
+    padding-right: 12rem;
+    padding-left: 12rem;
+    border-radius: 12px;
+    background: var(--white);
+    color: var(--grey);
+    border: 2px solid var(--border);
+    width: fit-content;
+}
+
+.snum{
+    grid-column: 1/2;
+    grid-row: 5/6;
+    place-items: center;
+    margin-right: 1rem;
+}
+
+.snum .wrap{
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+    width: fit-content;
+    background: var(--white);
+    color: var(--grey);
+    border: 2px solid var(--border);
+    border-radius: 12px;
+    transition: all 1s ease;
+}
+.snum h2{
+    grid-row: 1/2;
+    margin: 0;
+    padding: 0;
+    color: var(--orange);
+}
+
+.snum p{
+    grid-row: 2/3;
+    margin-left: 6rem;
+    margin-right: 6rem;
+}
+
+
+.daily{
+    grid-column: 2/3;
+    grid-row: 5/6;
+    place-items: center;
+    margin-left: 1rem;
+}
+.daily .wrap{
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+    width: fit-content;
+    background: var(--white);
+    color: var(--grey);
+    border: 2px solid var(--border);
+    border-radius: 12px;
+    transition: all 1s ease;
+}
+
+.daily h2{
+    grid-row: 1/2;
+    margin: 0;
+    padding: 0;
+    color: var(--green);
+}
+
+.daily p{
+    grid-row: 2/3;
+    margin-left: 6rem;
+    margin-right: 6rem;
+}
+
+.scontainer .wrap{
+    box-shadow: 0 0 15px var(--grey);
+}
+.scontainer .patience p{
+    box-shadow: 0 0 15px var(--grey);
+    transition: all 0.5s ease;
+}
+
+.scontainer .patience p:hover{
+    transform: scale(1.05);    
+}
+
+.scontainer .snum .wrap:hover{
+background: color-mix(in srgb, white 80%, var(--orange));
+}
+
+.scontainer .daily .wrap:hover{
+background: color-mix(in srgb, white 80%, var(--green));
+}
+
+#menu{
+    background: var(--coffee);
+    background: var(--coffee_gradient);
+    padding-top: 6rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 8rem;
+}
+
+.mcontainer{
+    display: flex;
+    flex-direction: column;
+}
+
+/* > - used for the explicit , not other h2s in the nest */
+
+.mcontainer > h5{
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.mcontainer > h2{
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+.mcontainer > p{
+    text-align: center;
+    margin-bottom: 3.5rem;
+}
+.scroll{
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;          /* allows scrolling , no breaking in line */
+    overflow-x: auto;           /* horizontall expand */
+    scrollbar-width: none;     
+    cursor: grab;
+    user-select: none;
+    gap: 2rem; 
+}
+.scroll:active{
+    cursor: grabbing;   /*click effekt*/
+}
+
+.item1{
+    display: grid;
+    grid-template-rows: 2fr 1fr;
+    border-radius: 12px;
+    flex-shrink: 0;             /* for no shrink when using border */ 
+    width: fit-content;         
+    overflow: hidden; 
+    border: 2px solid var(--coffee);
+}
+.upper1 img, .upper2 img, .upper3 img {
+    width: 100%;          
+    height: 15rem; 
+    object-fit: cover;     
+}
+.upper1{
+    grid-row: 1/2;
+    position: relative;
+}
+
+.lower1{
+    grid-row: 2/3;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: auto;
+}
+
+.upper1 h4{
+    position: absolute;
+    left: 1.5rem;
+    bottom: 12rem;
+    background: var(--green);
+    background: var(--green_gradient);
+    border-radius: 14px;
+    font-size: 0.8rem;
+    padding: 0.5rem;
+    align-self: center;
+} 
+
+.lower1 h2{
+    margin-top: 0.5rem;
+    grid-column: 1/-1;
+    grid-row: 1/2;
+    font-size: 1.5rem;
+    text-align: center;
+}
+.lower1 p{
+    grid-column: 1/-1;
+    grid-row: 2/3;
+    text-align: center;
+}
+.lower1 h5{
+    grid-column: 1/2;
+    grid-row: 3/4;  
+    text-align: left;
+    align-self: center;
+    margin-left: 1rem;
+}
+.lower1 > .second{
+    grid-column: 2/3;
+    grid-row: 3/4;  
+}
+
+.lower1 .second{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-self: right;
+    margin-right: 1rem;
+}
+
+.lower1 .second h5{
+    margin: 0;
+    padding: 0;
+}
+
+.item3{
+    display: grid;
+    grid-template-rows: 2fr 1fr;
+    border-radius: 12px;
+    flex-shrink: 0;             /* for no shrink when using border */ 
+    width: fit-content;         
+    overflow: hidden; 
+    border: 2px solid var(--coffee);
+}
+.upper2{
+    grid-row: 1/2;
+    position: relative;
+}
+
+.lower2{
+    grid-row: 2/3;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: auto;
+}
+
+.upper2 h4{
+    position: absolute;
+    left: 1.5rem;
+    bottom: 12rem;
+    background: var(--green);
+    background: var(--green_gradient);
+    border-radius: 14px;
+    font-size: 0.8rem;
+    padding: 0.5rem;
+    align-self: center;
+} 
+
+.lower2 h2{
+    margin-top: 0.5rem;
+    grid-column: 1/-1;
+    grid-row: 1/2;
+    font-size: 1.5rem;
+    text-align: center;
+}
+.lower2 p{
+    grid-column: 1/-1;
+    grid-row: 2/3;
+    text-align: center;
+}
+.lower2 h5{
+    grid-column: 1/2;
+    grid-row: 3/4;  
+    text-align: left;
+    align-self: center;
+    margin-left: 1rem;
+}
+.lower2 > .second{
+    grid-column: 2/3;
+    grid-row: 3/4;  
+}
+
+.lower2 .second{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-self: right;
+    margin-right: 1rem;
+}
+
+.lower2 .second h5{
+    margin: 0;
+    padding: 0;
+}
+
+.item5{
+    display: grid;
+    grid-template-rows: 2fr 1fr;
+    border-radius: 12px;
+    flex-shrink: 0;             /* for no shrink when using border */ 
+    width: fit-content;         
+    overflow: hidden; 
+    border: 2px solid var(--coffee);
+}
+.upper3{
+    grid-row: 1/2;
+    position: relative;
+}
+
+.lower3{
+    grid-row: 2/3;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: auto;
+}
+
+.upper3 h4{
+    position: absolute;
+    left: 1.5rem;
+    bottom: 12rem;
+    background: var(--green);
+    background: var(--green_gradient);
+    border-radius: 14px;
+    font-size: 0.8rem;
+    padding: 0.5rem;
+    align-self: center;
+} 
+
+.lower3 h2{
+    margin-top: 0.5rem;
+    grid-column: 1/-1;
+    grid-row: 1/2;
+    font-size: 1.5rem;
+    text-align: center;
+}
+.lower3 p{
+    grid-column: 1/-1;
+    grid-row: 2/3;
+    text-align: center;
+}
+.lower3 h5{
+    grid-column: 1/2;
+    grid-row: 3/4;  
+    text-align: left;
+    align-self: center;
+    margin-left: 1rem;
+}
+.lower3 > .second{
+    grid-column: 2/3;
+    grid-row: 3/4;  
+}
+
+.lower3 .second{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-self: right;
+    margin-right: 1rem;
+}
+
+.lower3 .second h5{
+    margin: 0;
+    padding: 0;
+}
+
+.second i{
+    color: var(--orange);
+    margin: 0;
+}
+
+.item1 p, .item2 p, .item3 p, .item4 p, .item5 p, .item6 p{
+    font-size: 1rem;      
+}
+
+
+.item2{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    border-radius: 12px;
+    flex-shrink: 0;             /* for no shrink when using border */ 
+    /*width-heigth setup*/
+    width: 20rem;         /* to match visually*/
+    height: fit-content;    
+    overflow: hidden; 
+    border: 2px solid var(--coffee);
+    background: var(--coffee2);
+    background: var(--coffee_gradient2);
+}
+
+.item2 h2, p, h5, i{
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.item2 h5, i{
+    margin-bottom: 2rem;
+}
+
+.item2 h2{
+    grid-column: 1/-1;
+    grid-row: 1/2;
+    margin-top: 2rem;
+    justify-items: center;
+    text-align: start;
+}
+.item2 p{
+    margin-top: 1rem;
+    grid-column: 1/-1;
+    grid-row: 2/3;
+    margin-bottom: 3.5rem;
+    text-align: start
+}
+.item2 h5{
+    grid-column: 1/2;
+    grid-row: 3/4;
+    text-align: start; 
+}
+.item2 i{
+    grid-column: 2/3;
+    grid-row: 3/4;
+    text-align: end;
+}
+
+.item4{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    border-radius: 12px;
+    flex-shrink: 0;             /* for no shrink when using border */ 
+    /*width-heigth setup*/
+    width: 20rem;         /* to match visually*/
+    height: fit-content;    
+    overflow: hidden; 
+    border: 2px solid var(--coffee);
+    background: var(--coffee2);
+    background: var(--coffee_gradient2);
+}
+
+.item4 h2, p, h5, i{
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.item4 h5, i{
+    margin-bottom: 2rem;
+}
+
+.item4 h2{
+    grid-column: 1/-1;
+    grid-row: 1/2;
+    margin-top: 2rem;
+    justify-items: center;
+    text-align: start;
+}
+.item4 p{
+    margin-top: 1rem;
+    grid-column: 1/-1;
+    grid-row: 2/3;
+    margin-bottom: 3.5rem;
+    text-align: start
+}
+.item4 h5{
+    grid-column: 1/2;
+    grid-row: 3/4;
+    text-align: start; 
+}
+.item4 i{
+    grid-column: 2/3;
+    grid-row: 3/4;
+    text-align: end;
+}
+
+.item6{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    border-radius: 12px;
+    flex-shrink: 0;             /* for no shrink when using border */ 
+    /*width-heigth setup*/
+    width: 20rem;         /* to match visually*/
+    height: fit-content;    
+    overflow: hidden; 
+    border: 2px solid var(--coffee);
+    background: var(--coffee2);
+    background: var(--coffee_gradient2);
+}
+
+.item6 h2, p, h5, i{
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.item6 h5, i{
+    margin-bottom: 2rem;
+}
+
+.item6 h2{
+    grid-column: 1/-1;
+    grid-row: 1/2;
+    margin-top: 2rem;
+    justify-items: center;
+    text-align: start;
+}
+.item6 p{
+    margin-top: 1rem;
+    grid-column: 1/-1;
+    grid-row: 2/3;
+    margin-bottom: 3.5rem;
+    text-align: start
+}
+.item6 h5{
+    grid-column: 1/2;
+    grid-row: 3/4;
+    text-align: start; 
+}
+.item6 i{
+    grid-column: 2/3;
+    grid-row: 3/4;
+    text-align: end;
+}
+
+#gallery{
+    background: var(--ngrey);
+    background: var(--grey_gradient);
+}
+
+.gcontainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 5rem;
+    padding-bottom: 8rem;
+}
+
+.gcontainer h2{
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.gcontainer p{
+    margin-bottom: 3rem;
+}
+/* preparation for adjustive galery */
+.garea{
+    display: grid;
+    grid-template-columns: repeat(4,12.5rem);
+    grid-template-rows: repeat(3, 12.5rem);
+    gap: 2rem;
+    /* width a heigth */
+    grid-template-areas: 
+    "img1 img1 img2 img2"
+    "img1 img1 img3 img4"
+    ". img5 img5 img4";
+
+    width: 100%;     
+    justify-content: center;
+}
+
+.garea img{
+    width: 100%;
+    height: 100%;
+    /* dealing with img fitting */
+    object-fit: cover;
+    display: block;
+    border: 4px solid var(--orange);
+    box-shadow: 0 0 15px var(--grey);
+    border-radius: 8px;
+    transition: 0.5s all ease;
+}
+
+.garea img:hover{
+    transform: scale(1.1) rotate(3deg);   
+}
+
+/* to add in areas */
+.garea img:nth-child(1) { grid-area: img1;}
+.garea img:nth-child(2) { grid-area: img2;}
+.garea img:nth-child(3) { grid-area: img3;}
+.garea img:nth-child(4) { grid-area: img4;}
+.garea img:nth-child(5) { grid-area: img5;}
+
+
+#visit{
+    background: var(--coffee);
+    background: var(--coffee_gradient);
+}
+
+.vcontainer{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: auto;
+    padding-top: 4rem;
+    padding-bottom: 6rem;
+}
+
+.vcontainer h5{
+    grid-column: 1/-1;
+    grid-row: 1/2;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.vcontainer h2{
+    grid-column: 1/-1;
+    grid-row: 2/3;
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+.vcontainer p{
+    grid-column: 1/-1;
+    grid-row: 3/4;
+    text-align: center;
+    margin-bottom: 3.5rem;
+}
+
+.vcontainer .vinfo{
+    grid-column: 1/2;
+    grid-row: 4/5
+}
+
+.vcontainer .vtouch{
+    grid-column: 2/3;
+    grid-row: 4/5;
+}
+
+.vinfo{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;    
+}
+
+.vinfo i{
+    position: relative;
+}
+
+.vinfo h2{
+    margin: 0;
+    font-size: 1.5rem ;
+}
+
+.vinfo p{
+    margin: 0;
+}
+
+.vinfo .iaddress{
+    background: var(--ngrey);
+    background: var(--grey_gradient);
+    border: 3px solid var(--white);
+    border-radius: 12px;
+    margin-left: 3rem;
+    margin-right: 3rem;    
+    position: relative;
+    transition: 1s all ease;
+}
+.iaddress:hover{
+    box-shadow: 0 0 20px 15px var(--white);
+    transform: scale(1.05);
+}
+
+.iaddress i{
+    position: absolute;
+    color: var(--white);
+    bottom: 0rem; 
+    left: 0rem;
+    border-radius: 50%;
+    border: 3px solid var(--orange);
+    padding: 0.7rem;
+    background: var(--orange);
+    background: var(--orange_gradient);
+}
+
+.iaddress h2{
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    margin-left: 6.5rem;
+    text-align: start;
+}
+
+.iaddress p:nth-of-type(1){
+    margin-bottom: 0.3rem;
+    margin-left: 6.5rem;
+    text-align: start;
+}
+
+.iaddress p:nth-of-type(2){
+    margin-bottom: 1rem;
+    margin-left: 6.5rem;
+    text-align: start;
+}
+
+
+.vinfo .ihours{
+    background: var(--ngrey);
+    background: var(--grey_gradient);
+    border: 3px solid var(--white);
+    border-radius: 12px;
+    margin-left: 3rem;
+    margin-right: 3rem;    
+    position: relative;
+    transition: 1s all ease;
+}
+.ihours:hover{
+    box-shadow: 0 0 20px 15px var(--white);
+    transform: scale(1.05);
+}
+
+.ihours i{
+    position: absolute;
+    color: var(--white);
+    bottom: 1.7rem; 
+    left: 0rem;
+    border-radius: 50%;
+    border: 3px solid var(--green);
+    padding: 0.7rem;
+    background: var(--green);
+    background: var(--green_gradient);
+}
+
+.ihours h2{
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    margin-left: 6.5rem;
+    text-align: start;
+}
+
+.ihours p:nth-of-type(1){
+    margin-bottom: 0.3rem;
+    margin-left: 6.5rem;
+    text-align: start;
+}
+.ihours p:nth-of-type(2){
+    margin-bottom: 0.3rem;
+    margin-left: 6.5rem;
+    text-align: start;
+}
+.ihours p:nth-of-type(3){
+    margin-bottom: 0.3rem;
+    margin-left: 6.5rem;
+    text-align: start;
+}
+.ihours p:nth-of-type(4){
+    margin-bottom: 1rem;
+    margin-left: 6.5rem;
+    text-align: start;
+}
+
+
+.vinfo .icontact{
+    background: var(--ngrey);
+    background: var(--grey_gradient);
+    border: 3px solid var(--white);
+    border-radius: 12px;
+    margin-left: 3rem;
+    margin-right: 3rem;    
+    position: relative;
+    transition: 0.5s all ease;
+}
+.icontact:hover{
+    box-shadow: 0 0 20px 15px var(--white);
+    transform: scale(1.05);
+}
+
+.icontact i{
+    position: absolute;
+    color: var(--white);
+    bottom: 0rem; 
+    left: 0rem;
+    border-radius: 50%;
+    border: 3px solid var(--orange);
+    padding: 0.7rem;
+    background: var(--orange);
+    background: var(--orange_gradient);
+}
+
+.icontact h2{
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    margin-left: 6.5rem;
+    text-align: start;
+}
+
+.icontact p:nth-of-type(1){
+    margin-bottom: 0.3rem;
+    margin-left: 6.5rem;
+    text-align: start;
+}
+
+.icontact p:nth-of-type(2){
+    margin-bottom: 1rem;
+    margin-left: 6.5rem;
+    text-align: start;
+}
+
+.vinfo p{
+    color: var(--black);
+}
+
+.vtouch{
+    display: grid;
+    grid-template-rows: repeat(4, auto);
+    margin-left: 3rem;
+    margin-right: 3rem;
+    height: fit-content;
+    background: var(--ngrey);
+    background: var(--grey_gradient);
+    border: 3px solid var(--white);
+    border-radius: 12px;
+}
+
+.vtouch .vhead, .vmail, .vmessage, .vsend{
+    margin-left: 3rem;
+    margin-right: 3rem;
+}
+
+.vtouch .vhead{
+    grid-row: 1/2;
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.vhead i{
+    margin: 0;
+    color: var(--white);
+    border-radius: 50%;
+    border: 3px solid var(--orange);
+    padding: 0.7rem;
+    background: var(--orange);
+    background: var(--orange_gradient);
+}
+
+.vhead h2{
+    margin: 0;
+    font-size: 1.7rem;
+}
+
+.vtouch .vmail{
+    grid-row: 2/3;
+    margin-bottom: 1.5rem;
+}
+
+.vmail input{
+    width: 93%;
+    padding: 1rem;
+    color: var(--black);
+    border: 1px solid var(--orange);
+    background: var(--white);
+    background: var(--white_gradient);
+    border-radius: 12px;
+}
+
+.vtouch .vmessage{
+    grid-row: 3/4;
+    margin-bottom: 1.5rem;
+}
+
+.vmessage input{
+    width: 93%;
+    padding: 1rem;
+    padding-bottom: 5.5rem;
+    color: var(--black);
+    border: 1px solid var(--orange);
+    background: var(--white);
+    background: var(--white_gradient);
+    border-radius: 12px;
+}
+
+.vtouch button{
+    grid-row: 4/5;
+    margin-bottom: 2rem;
+    padding: 0.8rem;
+    border: 3px solid var(--orange);
+    background: var(--orange);
+    background: var(--orange_gradient);
+    border-radius: 18px;
+    color: var(--white);
+    width: 100%;
+}
+
+.vtouch button:active{
+    transform: scale(0.9);
+}
+
+
+/* js message */
+.button-click{
+    display: none;  /* invisible till used */
+    text-align: center;    
+    color: var(--grey);
+    border: 3px solid var(--green);
+    background: var(--ngrey);
+    background: var(--grey_gradient);
+    padding: 0.3rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    border-radius: 18px;
+    position: absolute;
+    margin-left: -5rem;
+    margin-top: 5rem;
+    
+}
+
+.vsend{
+    position: relative;
+}
+
+
+footer{
+    background: var(--coffee2);
+    background: var(--coffee_gradient2);
+}
+
+.fcontainer{
+    padding-top: 4rem;
+    margin-left: 4rem;
+    margin-right: 4rem;
+    padding-bottom: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto;
+}
+
+.fcontainer .fname{
+    grid-column: 1/2;
+    display: flex;
+    flex-direction: column;
+}
+
+.fgroup1{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.fgroup1 h4{
+    border-radius: 8px;
+    background: var(--black);
+    background: var(--black_gradient);
+    color: var(--white);
+    padding: 0.5rem;
+    transition: 0.5s all ease;
+}
+
+.fgroup1 h4:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 15px var(--black_forgradient);
+}
+
+
+.fgroup1 i{
+    margin: 0;
+    background: var(--green);
+    background: var(--green_gradient);
+    border-radius: 50px;
+    padding: 0.5rem;
+}
+
+.fname p{
+    margin: 0;
+}
+
+.fcontainer .fletter{
+    grid-column: 2/3;
+    display: grid;
+    grid-template-rows: repeat(4,auto);
+}
+
+.fletter .fgroup2{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;   
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.fgroup2 i{
+    margin: 0;
+    color: var(--orange);
+}
+
+.fletter p{
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.fletter .wrp{
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.wrp input{
+    width: 16rem;
+    padding: 1rem;
+    border-radius: 8px;
+    background: var(--white);
+    background: var(--white_gradient);
+    color: var(--black);
+    border: 1px solid var(--orange);
+}
+
+.wrp button{
+    font-size: 1rem;
+    padding: 0.6rem;
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
+    border-radius: 8px;
+    background: var(--orange);
+    background: var(--orange_gradient);
+    color: var(--white);
+    border: 2px solid var(--orange);
+}
+
+.wrp button:active{
+    transform: scale(0.9);
+}
+
+.fletter .to-top{
+    grid-row: 4 / 5;    
+    justify-self: end;
+}
+
+.to-top a button{
+    border-radius: 50px;
+    background: var(--green);
+    background: var(--green_gradient);
+    border: 3px solid var(--green);
+    transition: 0.5s all ease;
+}
+
+.to-top a button:active{
+    transform: scale(0.9);
+}
+
+.to-top a button:hover{
+    transform: scale(1.1);
+    filter: contrast(1.5);
+}
+
+.to-top a button i{
+    color: var(--white);
+}
+
+
+/**** media quaries ****/
+/* adjusting for reso , but also redifining cause of not such great code design */
+
+/* for phones */
+@media (max-width:767px){
+
+    #Hcontainer{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        align-items: center;
+        border-bottom: 3px solid var(--coffee);
+        padding-top: 0.3rem;
+        padding-bottom: 0.3rem;
+        margin-bottom: -2rem;
+    }
+
+    .title2 nav ul{
+        display: none;
+        position: relative;
+    }
+
+    .title2 nav.nav-open ul{
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        gap: 0;
+        position: absolute;
+        top: 6rem;
+        right: 1.1rem;
+        padding: 1rem;
+        background: var(--grey_gradient);
+        border-radius: 12px;
+    }
+
+    .title2 button{
+        display: block;
+        margin-right: 3rem;
+        border-radius: 50px;
+        background: var(--green);
+        background: var(--green_gradient);
+        color: var(--white);
+        border: 0 0 15px var(--grey);
+        transition: 0.3s all ease;
+    }
+
+    .title2 button:active{
+        transform: scale(0.8);
+    }
+
+    .title2 button i{
+        display: block;
+        margin: 10px;
+    }
+
+    .hcontainer{
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: repeat(2,auto);
+        margin-left: 2rem;
+        padding-bottom: 4rem;
+        padding-top: 0;
+    }
+
+    .hblend{
+        grid-column: 1/-1;
+        grid-row: 1/2;
+    }
+
+    .blend{
+        grid-column: 1/-1;
+        grid-row: 2/3;
+    }
+
+    .blend img{
+        text-align: center;
+        width: fit-content;
+        height: fit-content;
+    }
+
+    .scontainer{
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+
+    .patience > p{
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    .snum .wrap{
+       padding-bottom: 1.2rem;
+    }
+
+    .garea{
+    grid-template-columns: repeat(2,12.5rem);
+    grid-template-rows: repeat(4, 12.5rem);
+    gap: 2rem;
+    grid-template-areas: 
+
+    "img1 img1"
+    "img1 img1"
+    "img2 img2"
+    "img5 img5"
+    "img4 img3";
+
+    }
+
+    .vcontainer{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    padding-top: 4rem;
+    padding-bottom: 6rem;
+    }
+
+    .vcontainer .vinfo{
+        grid-column: 1/-1;
+        grid-row: 4/5;
+        margin-bottom: 2rem;
+    }
+
+    .vcontainer .vtouch{
+        grid-column: 1/-1;
+        grid-row: 5/6;
+    }
+
+    .fletter input{
+        margin-bottom: 0.5rem;
+        margin-left: 2rem;
+    }
+
+}
+/* for tablets */
+@media (min-width:768px){
+
+    #Hcontainer{
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: auto;
+        align-items: center;
+        border-bottom: 3px solid var(--coffee);
+        padding-top: 0.3rem;
+        padding-bottom: 0.3rem;
+        margin-bottom: -2rem;
+    }
+
+    .title2 nav ul{
+        gap: 2rem;
+    }
+
+    .hcontainer{
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: repeat(2,auto);
+        margin-left: 2rem;
+        padding-bottom: 4rem;
+        padding-top: 0;
+    }
+
+    .hblend{
+        grid-column: 1/-1;
+        grid-row: 1/2;
+    }
+
+    .blend{
+        grid-column: 1/-1;
+        grid-row: 2/3;
+        position: relative;
+
+    }
+
+    .blend img{
+        text-align: center;
+        width: fit-content;
+        height: fit-content;
+    }
+
+    .scontainer{
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+
+    .garea{
+    grid-template-columns: repeat(3,12.5rem);
+    grid-template-rows: repeat(4, 12.5rem);
+    gap: 2rem;
+    grid-template-areas: 
+
+    "img1 img1 img4"
+    "img1 img1 img4"
+    "img2 img2 img3"
+    "img5 img5 .";
+    }
+
+    .vcontainer{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    padding-top: 4rem;
+    padding-bottom: 6rem;
+    }
+
+    .vcontainer .vinfo{
+        grid-column: 1/-1;
+        grid-row: 4/5;
+        margin-bottom: 2rem;
+    }
+
+    .vcontainer .vtouch{
+        grid-column: 1/-1;
+        grid-row: 5/6;
+    }
+
+}
+/* for desktops */
+@media (min-width:1024px){
+
+    .hcontainer{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows:auto;
+    margin-left: 2rem;
+    padding-top: 4rem;
+    padding-bottom: 10rem;
+    }
+
+    .title2 nav ul{
+        gap: 3rem;
+    }
+
+
+    .hblend{
+        grid-column: 1/2;
+        grid-row: 1/-1;
+        display: grid;
+        grid-template-rows: repeat(4,auto);
+    }
+
+    .blend{
+        grid-column: 2/3;
+        grid-row: 1/-1;
+        position: relative;
+    }
+    .blend img{
+    width: fit-content;
+    height: 25rem;
+    border-radius: 50% 60% 40% 70% / 50% 80% 40% 55%;
+    margin-bottom: 4rem;
+    position: relative;
+    z-index: 2;
+    border: 5px solid var(--white);
+    box-shadow: 0 0 15px var(--grey);
+    transition: all 0.5s ease;
+
+    }
+
+    .garea{
+    display: grid;
+    grid-template-columns: repeat(4,12.5rem);
+    grid-template-rows: repeat(3, 12.5rem);
+    gap: 2rem;
+    /* width a heigth */
+    grid-template-areas: 
+    "img1 img1 img2 img2"
+    "img1 img1 img3 img4"
+    ". img5 img5 img4";
+
+    width: 100%;     
+    justify-content: center;
+    }
+
+    .vcontainer{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: auto;
+    padding-top: 4rem;
+    padding-bottom: 6rem;
+    }
+
+    .vcontainer .vinfo{
+        grid-column: 1/2;
+        grid-row: 4/5
+    }
+
+    .vcontainer .vtouch{
+        grid-column: 2/3;
+        grid-row: 4/5;
+    }
+
+    
+}

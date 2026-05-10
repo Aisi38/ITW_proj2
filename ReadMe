@@ -1,0 +1,19 @@
+#Andrej Varečka(xvareca00)
+
+#Riešenie
+    V tomto projekte som sa zameral na riešenie vysádzania pomocou hlave:
+    Gridu, Flexboxu a prípadne v náročnejších oblastia ako scroll, kombinovaním.
+
+    Taktiež som použival grid areas na interaktivnu zmenu rozlisenia a vyhral som sa s farbami - bordermi , pomocou marginov a padingov. 
+    
+    Taktiež dúfam že ako podsekcia sa rátaju deti-väčšie časti obalene divmi hned po sekcii 
+
+#Použitie umelej inteligcie
+    Použil som Ai pre návrh farebných kombinácii ktore som potom
+    podla môjho uváženia používal. Taktiež som vďaka umelej inteligencie mohol
+    spravit v sekcii Menu skrolovanie pomocou myšky ktorú bolo treba v JS doplniť.
+
+
+
+#Nástroje
+    Ako posledné som používal na tvorbu gradientov stranku:(https://cssgradient.io) a na výber fontov:(https://fonts.google.com)
